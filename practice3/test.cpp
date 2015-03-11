@@ -10,14 +10,8 @@ namespace {
 }
 
 
-
-void test(decltype(sampleMultiply) fsample, decltype(sampleMultiply) ftestee) {
-    using namespace std;
-    srand(time(0));
-}
-
 int main() {
-    using std::assert;
+    using namespace std;
     assert(pr_strcmp("hello", "hello") == 0);
     assert(pr_strcmp("hello", "hallo") > 0);
     assert(pr_strcmp("hello", "hell") > 0);

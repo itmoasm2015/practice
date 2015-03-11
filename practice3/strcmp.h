@@ -1,4 +1,4 @@
-#ifdef _PR3_STRCMP_H
+#ifndef _PR3_STRCMP_H
 #define _PR3_STRCMP_H
 
 
