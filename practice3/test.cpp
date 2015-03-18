@@ -8,6 +8,21 @@
 #include <sys/time.h>
 #include "strcmp.h"
 
+int c_strcmp(char const *s1, char const *s2) {
+    while (*s1 && *s2 && *s1 == *s2) {
+        ++s1;
+        ++s2;
+    }
+    if (*s1 || *s2) {
+        if (*s1 < *s2)
+            return -1;
+        else
+            return 1;
+    } else {
+        return 0;
+    }
+}
+
 double benchmark(decltype(std::strcmp) f) {
     using namespace std;
     vector<char> data(1000000, 'c');
@@ -41,5 +56,6 @@ int main() {
     
     cout << "strcmp\t" << benchmark(std::strcmp) << endl;
     cout << "pr_strcmp\t" << benchmark(pr_strcmp) << endl;
+    cout << "c_strcmp\t" << benchmark(c_strcmp) << endl;
     return 0;
 }
