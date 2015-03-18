@@ -8,4 +8,4 @@ test: test.o strcmp.o
 	g++ $(CXXFLAGS) -o $@ $^
 
 %.o: %.asm
-	yasm -f elf32 -g dwarf2 -o $@ $^
+	yasm -f elf64 -g dwarf2 -o $@ $^
