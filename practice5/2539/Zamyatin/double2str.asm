@@ -1,6 +1,5 @@
 ;   source: http://www.ampl.com/REFS/rounding.pdf
 default rel
-extern printf
 global double2str
 
 section     .text
@@ -15,7 +14,8 @@ double2str:
     push    r15
 
     mov     r8, rsi
-    mov     rax,  [rdi]
+    movlps  [tmp], xmm0
+    mov     rax,  [tmp]
     
     cmp     rax, 0
     jge     .no_neg
@@ -225,7 +225,7 @@ inf_nan:
     cmp     rax, 0
     jg      .nan
     cmp     byte [r8-1], '-'
-    jz     .minus
+    jz      .minus
     mov     byte [r8], '+'
     inc     r8  
 
@@ -358,14 +358,6 @@ my_round_to_zero:
     pop     r11
     pop     r10
     ret
-
-
-writed:
-    mov     rdi, msgd
-    and     rsp, -16
-    call    printf
-    ret
-
 
 
 section .data
