@@ -1,4 +1,3 @@
-default rel
 global 		str2double
 
 str2double:
