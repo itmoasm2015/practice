@@ -7,8 +7,6 @@ extern "C" {
 
 double str2double(char const *s);
 
-void double2str(double x, char *s);
-
 #ifdef __cplusplus
 }
 #endif

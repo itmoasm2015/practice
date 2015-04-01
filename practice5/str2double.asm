@@ -11,7 +11,7 @@ str2double:
 	mov r10, 0		;flag '.'
 	mov r11, 0		;flag '-'
 	
-	.loop:			;read nuber, result stored in rbx
+	.loop:			;read number, result stored in rbx
 		xor rax, rax
 		mov byte al, [rdi]
 		inc rdi		;next char

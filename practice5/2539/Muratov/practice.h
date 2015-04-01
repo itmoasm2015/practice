@@ -1,13 +1,12 @@
-#ifndef _PRACTICE_5_H
-#define _PRACTICE_5_H
+#ifndef _PRACTICE
+#define _PRACTICE
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 double str2double(char const *s);
-
-void double2str(double x, char *s);
 
 #ifdef __cplusplus
 }
