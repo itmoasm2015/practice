@@ -1,3 +1,4 @@
+default rel
 global str2double
 section .text
 
@@ -24,7 +25,7 @@ str2double:
         jne .loop
     .point
     inc rdi
-    movsd xmm1, [rel invTen]
+    movsd xmm1, [invTen]
     .loop1
         xor rax, rax
         mov byte al, [rdi]
@@ -32,7 +33,7 @@ str2double:
         cvtsi2sd xmm2, rax
         mulsd xmm2, xmm1
         addsd xmm0, xmm2
-        mulsd xmm1, [rel invTen]
+        mulsd xmm1, [invTen]
         inc rdi
         cmp byte [rdi], 0
         jne .loop1
