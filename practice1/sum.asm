@@ -23,9 +23,18 @@ main:
     ; add X and Y into ST0
     fld     qword [dblY]
     fld     qword [dblX]
+<<<<<<< HEAD
+    fyl2x
+    fld1
+    fscale
+  
+    ; print the result
+    sub     esp, 8
+=======
     ;faddp   st1
     call pow 
 
+>>>>>>> a0fd4b47407bd8bfb69c69a6726d768672278543
     fstp    qword [esp]
     push    fmtOut
     call    printf
@@ -35,6 +44,12 @@ main:
     xor     eax, eax
     ret
 
+<<<<<<< HEAD
+section .data
+fmtPrompt:  db 'Enter X and Y: ', 0
+fmtIn:      db '%lf%lf', 0
+fmtOut:     db 'X ^ Y is %f', 10, 0
+=======
 pow:
     fyl2x
     ftst
@@ -60,6 +75,7 @@ pow:
         fisub dword [intNum]
         jmp .done
     .done
+>>>>>>> a0fd4b47407bd8bfb69c69a6726d768672278543
 
     ;sub esp, 8
     ;fst qword [esp]

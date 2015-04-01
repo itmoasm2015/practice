@@ -12,10 +12,6 @@ bool eq(double a, double b)
 
 int main()
 {
-    double x = 0.4;
-    x = str2double("-.1234");
-    printf("x : %f\n", x);
-
     assert(eq(str2double("0.0"), 0.0));
     assert(eq(str2double("1.0"), 1.0));
     assert(eq(str2double("1000000.0"), 1000000.0));
