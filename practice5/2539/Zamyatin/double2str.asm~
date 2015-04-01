@@ -1,5 +1,4 @@
 ;   source: http://www.ampl.com/REFS/rounding.pdf
-default rel
 extern printf
 global double2str
 
