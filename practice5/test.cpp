@@ -7,7 +7,7 @@
 bool eq(double a, double b)
 {
     using namespace std;
-    return abs(a-b) < max(0.00001, abs(a) * 0.00001);
+    return abs(a-b) < max(0.00001, max(abs(b) * 0.00001, abs(a) * 0.00001));
 }
 
 int main()
