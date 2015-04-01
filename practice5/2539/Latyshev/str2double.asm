@@ -29,8 +29,8 @@ str2double:
 	jmp		short .loop
 .dot
 .loop2
-	inc		edi
-	cmp		[edi], byte 0
+	inc		rdi
+	cmp		[rdi], byte 0
 	jnz		.loop2
 
 	pxor	xmm3, xmm3
