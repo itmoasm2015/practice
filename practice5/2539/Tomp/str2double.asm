@@ -11,16 +11,16 @@ str2double:
 .integer:
         cmp al, '.'
         je .dot
-        mulsd xmm0, qword [ten]
+        mulsd xmm0, qword [rel ten]
         sub al, '0'
         cvtsi2sd xmm1, eax
         addsd xmm0, xmm1
         lodsb
         jmp .integer
 .dot:
-        movsd xmm1, qword [one]
+        movsd xmm1, qword [rel one]
 .frac:
-        divsd xmm1, qword [ten]
+        divsd xmm1, qword [rel ten]
         lodsb
         test al, al
         jz .finish
@@ -32,7 +32,7 @@ str2double:
 .finish:
         test dl, MINUS
         jz .exit
-        mulsd xmm0, qword [minusOne]
+        mulsd xmm0, qword [rel minusOne]
 .exit:
         ret
 
