@@ -1,3 +1,4 @@
+default rel
 global str2double
 section .data
 _1 dq 10.0
