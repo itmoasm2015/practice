@@ -21,10 +21,12 @@ main:
     add     esp, 12
 
     ; add X and Y into ST0
-    fld     qword [dblX]
     fld     qword [dblY]
-    faddp   st1
-    
+    fld     qword [dblX]
+    fyl2x
+    fld1
+    fscale
+  
     ; print the result
     sub     esp, 8
     fstp    qword [esp]
@@ -39,7 +41,7 @@ main:
 section .data
 fmtPrompt:  db 'Enter X and Y: ', 0
 fmtIn:      db '%lf%lf', 0
-fmtOut:     db 'Sum of X and Y is %f', 10, 0
+fmtOut:     db 'X ^ Y is %f', 10, 0
 
 section .bss
 dblX:       resq 1
