@@ -1,4 +1,5 @@
 ;   source: http://www.ampl.com/REFS/rounding.pdf
+default rel
 global double2str
 
 section     .text
