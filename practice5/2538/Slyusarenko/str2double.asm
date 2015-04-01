@@ -1,3 +1,5 @@
+default rel
+
 global str2double
 
 section .text
@@ -46,9 +48,7 @@ str2double:
 	jmp .loop
 	
 .negate_number:
-	xor r10, r10
-	sub r10, rcx
-	mov rcx, r10
+	neg rcx
 	jmp .after_negation
 	
 .end:
