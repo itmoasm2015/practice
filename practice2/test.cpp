@@ -48,6 +48,9 @@ void test(decltype(sampleMultiply) fsample, decltype(sampleMultiply) ftestee) {
             bool ok = true;
             for(int n = 0; n < size * size; ++n) {
                 if(abs(sampleDest[n] - testeeDest[n]) > eps) {
+                    printf("n %d\n", n);
+                    printf("ok = %.5f\n", sampleDest[n]);
+                    printf("my = %.5f\n", testeeDest[n]);
                     ok = false;
                     break;
                 }
