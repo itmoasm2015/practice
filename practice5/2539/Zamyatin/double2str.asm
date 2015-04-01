@@ -13,7 +13,7 @@ double2str:
     push    r14
     push    r15
 
-    mov     r8, rsi
+    mov     r8, rdi
     movlps  [tmp], xmm0
     mov     rax,  [tmp]
     
@@ -362,9 +362,6 @@ my_round_to_zero:
 
 section .data
 ten:    dq      10.0
-msg:    db     '%lf', 10, 0
-msg1:   db     '!!!', 10, 0
-msgd:   db     '%lld', 10, 0
 iten:   dq      10
 two52:  dq      1 << 52
 I075:   dq      1075
