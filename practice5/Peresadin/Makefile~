@@ -15,5 +15,3 @@ test: $(OBJS)
 
 %.o: %.asm
 	yasm $(YASM_FLAGS) -o $@ $<
-clean:
-	rm -f *.o
