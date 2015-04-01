@@ -3,18 +3,19 @@ global str2double
 default rel
 
 str2double:
+	mov rsi, rdi
 	xor eax, eax
 	xor edx, edx
-	movsd xmm2, qword [one]
-	cmp [rdi], byte '-'
+	cld
+	movsd xmm2, qword [one] ; xmm2 contains 10^-i for frac_part
+	cmp [rsi], byte '-'
 	jne .plus
-	inc rdi
-	mov dl, 1
+	inc rsi
+	mov dl, 1 ; dl contains minus flag
 .plus
 	xorps xmm0, xmm0
 .int_part
-	mov al, [rdi]
-	inc rdi
+	lodsb
 	cmp al, '.'
 	jz .frac_part
 
@@ -25,8 +26,7 @@ str2double:
 	jmp .int_part
 .frac_part
 	divsd xmm2, qword [ten]
-	mov al, [rdi]
-	inc rdi
+	lodsb
 	test al, al
 	jz .finish
 	sub al, '0'
