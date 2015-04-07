@@ -1,4 +1,4 @@
-default rel
+;default rel
 
 extern printf
 

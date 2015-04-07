@@ -22,6 +22,7 @@ int main()
 
     for (double x: values)
     {
+        cout << x << endl;
         double2str(x, buffer);
         cout << buffer << endl;
     }
