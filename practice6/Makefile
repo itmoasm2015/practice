@@ -1,3 +1,5 @@
+all: vm/image.iso
+
 OS=$(shell uname)
 
 vm/image.iso: disc/p.com
