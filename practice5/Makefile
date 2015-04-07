@@ -13,10 +13,10 @@ endif
 .PHONY: all
 
 all: test
+	./test
 
 test: test.o $(OBJS)
 	g++ $(CXXFLAGS) -o $@ $^
-	./test
 
 test2: test2.o $(OBJS)
 	g++ $(CXXFLAGS) -o $@ $^
