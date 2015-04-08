@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.innotek.de/VirtualBox-settings" version="1.14-macosx">
-  <Machine uuid="{3eb9cd22-b105-42d1-a21a-d08bc73993a6}" name="msdos" OSType="DOS" snapshotFolder="Snapshots" lastStateChange="2015-04-07T21:44:30Z">
+  <Machine uuid="{3eb9cd22-b105-42d1-a21a-d08bc73993a6}" name="msdos" OSType="DOS" snapshotFolder="Snapshots" lastStateChange="2015-04-08T20:08:11Z">
     <MediaRegistry>
       <HardDisks/>
       <DVDImages>
@@ -19,7 +19,7 @@
     <ExtraData>
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
       <ExtraDataItem name="GUI/LastGuestSizeHint" value="720,400"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="400,209,720,421"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="720,88,720,421"/>
     </ExtraData>
     <Hardware version="2">
       <CPU count="1" hotplug="false">
@@ -150,7 +150,7 @@
       </EmulatedUSB>
       <Guest memoryBalloonSize="0"/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1428441106475346000" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1428519727516975000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
